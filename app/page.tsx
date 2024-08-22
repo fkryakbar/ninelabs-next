@@ -1,43 +1,22 @@
 import AccordionComponent from "@/components/Accordion";
+import MainLayout from "@/layouts/MainLayouts";
 import { Accordion, AccordionItem, Button } from "@nextui-org/react";
+import { Metadata } from "next";
 import Image from "next/image";
-
+export const metadata: Metadata = {
+  title: "Ninelabs - Website Profesional tanpa Ribet",
+  description: "Wujudkan website profesional yang cepat, menarik, aman, dan user-friendly untuk mengoptimalkan bisnis Anda. Kami siap mendukung kesuksesan digital Anda.",
+};
 export default function Home() {
   return (
-    <div className="relative">
-      <div className="w-full h-2 bg-gradient-to-r from-[#0061ff] to-[#60efff]" />
-      <nav className="flex h-[80px] items-center justify-center bg-white shadow-lg">
-        <div className="lg:w-[50%] w-[90%] mx-auto flex items-center justify-between">
-          <div className="text-xl font-bold text-gradient-primary">
-            <img
-              src="/assets/Ninelabs Logo.png"
-              alt="Ninelabs Logo"
-              className="w-[150px]"
-            />
-          </div>
-          <ul className="lg:flex gap-4 hidden text-slate-600">
-            <li className="text-cyan-500 font-semibold">
-              <a href="/">Home</a>
-            </li>
-            <li className="">
-              <a href="/blog">Pertanyaan</a>
-            </li>
-            <li className="">
-              <a href="/projects">Services</a>
-            </li>
-            <li className="">
-              <a href="/about">Tutorial</a>
-            </li>
-          </ul>
-        </div>
-      </nav>
+    <MainLayout>
       <div
         style={{ backgroundImage: 'url("/assets/bg.webp")' }}
-        className="relative  bg-cover bg-no-repeat lg:bg-[center_top_-60rem] md:bg-[center_top_-30rem] bg-[center_top_-10rem] overflow-clip"
+        className="relative  bg-cover bg-no-repeat lg:bg-[center_top_-60rem] md:bg-[center_top_-30rem] bg-[center_top_-10rem] overflow-clip pt-[80px]"
       >
         <img
           src="/assets/cloud.webp"
-          className="absolute lg:w-[200px] lg:top-[10px] lg:left-[150px] w-[100px] top-[10px] left-[10px] drop-shadow"
+          className="absolute lg:w-[200px] lg:top-[100px] lg:left-[150px] w-[100px] top-[90px] left-[10px] drop-shadow"
         />
         <img
           src="/assets/cloud.webp"
@@ -57,8 +36,7 @@ export default function Home() {
               kesuksesan digital Anda.
             </p>
             <div className="flex lg:flex-row flex-col items-center gap-3 justify-center mt-5">
-              <button
-                type="button"
+              <a href="https://wa.me/6285179946552"
                 className="text-white bg-blue-500 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2  focus:outline-none  flex items-center gap-2 transition-all"
               >
                 Konsultasi Gratis
@@ -74,12 +52,11 @@ export default function Home() {
                     clipRule="evenodd"
                   />
                 </svg>
-              </button>
-              <button
-                type="button"
+              </a>
+              <a href="#mulai"
                 className="text-white bg-cyan-500 hover:bg-cyan-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2  focus:outline-none  flex items-center gap-2  transition-all"
               >
-                Langkah Kerja
+                Lebih Lanjut
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
@@ -92,13 +69,13 @@ export default function Home() {
                     clipRule="evenodd"
                   />
                 </svg>
-              </button>
+              </a>
             </div>
             <img src="/assets/illustration.webp" className=" mx-auto mt-5" />
           </div>
         </div>
       </div>
-      <div className="lg:w-[60%] w-[90%] mx-auto mt-20">
+      <div id="mulai" className="lg:w-[60%] w-[90%] mx-auto mt-20">
         <p className="font-semibold text-blue-400 text-center text-xl">
           Jasa Pembuatan Website
         </p>
@@ -222,7 +199,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="lg:w-[60%] w-[90%] mx-auto mt-20">
+      <div id="proses" className="lg:w-[60%] w-[90%] mx-auto mt-20">
         <p className="font-semibold text-blue-400 text-center text-xl">
           Langkah Pembuatan website yang mudah bersama kami
         </p>
@@ -300,7 +277,8 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="relative mt-10 overflow-clip">
+
+      <div id="pertanyaan" className="relative mt-10 overflow-clip">
         <div className="lg:w-[60%] w-[90%] mx-auto ">
           <div className="grid lg:grid-cols-2 grid-cols-1 gap-5">
             <div className="flex flex-col justify-center">
@@ -325,7 +303,7 @@ export default function Home() {
                 <div>
                   <h1 className="font-semibold text-slate-600 text-xl">Diskusikan Bisnis Anda Bersama Kami</h1>
                   <p className="text-sm text-slate-600">Ingin konsultasi terlebih dahulu ? Konsultasikan secara gratis sekarang.</p>
-                  <a
+                  <a href="https://wa.me/6285179946552"
                     className="text-white w-fit mt-4 bg-blue-500 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2  focus:outline-none  flex items-center gap-2 transition-all"
                   >
                     Konsultasi Gratis
@@ -351,62 +329,8 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="bg-blue-500 mt-10">
-        <div className="lg:w-[60%] w-[90%] mx-auto  pt-10 pb-5">
-          <div className="grid lg:grid-cols-3 grid-cols-1 gap-4 mb-20">
-            <div>
-              <h1 className="text-white font-semibold text-3xl">NINELABS</h1>
-              <p className="text-gray-100 text-sm mt-3">Ninelabs adalah agency untuk pembuatan jasa pembuatan website, kelola website, dan design website profesional dengan layanan terbaik.</p>
-            </div>
-            <div>
-              <h1 className="text-white font-semibold text-3xl">Ninelabs</h1>
-              <div className="mt-5 space-y-2">
-                <a href="" className="flex gap-1 items-center text-white hover:text-amber-300">
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-4">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
-                  </svg>
-                  Home
-                </a>
-                <a href="" className="flex gap-1 items-center text-white hover:text-amber-300">
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-4">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
-                  </svg>
-                  Pertanyaan
-                </a>
-                <a href="" className="flex gap-1 items-center text-white hover:text-amber-300">
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-4">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
-                  </svg>
-                  Services
-                </a>
-                <a href="" className="flex gap-1 items-center text-white hover:text-amber-300">
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-4">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
-                  </svg>
-                  Tutorial
-                </a>
-                <a href="" className="flex gap-1 items-center text-white hover:text-amber-300">
-                  Syarat dan Ketentuan
-                </a>
-              </div>
-            </div>
-            <div>
-              <h1 className="text-white font-semibold text-3xl">Hubungi Kami</h1>
-              <div className="mt-5 space-y-2">
-                <div className="flex gap-1 items-center text-white hover:text-amber-300">
-                  +62 851-7994-6552
-                </div>
 
-              </div>
-            </div>
-          </div>
-          <hr className="my-5" />
-          <div>
-            <h3 className="text-center mt-5 text-white font-semibold">Ninelabs copyright © 2024. All Rights Reserved.</h3>
-          </div>
-        </div>
-      </div>
-    </div>
+    </MainLayout>
 
   );
 }

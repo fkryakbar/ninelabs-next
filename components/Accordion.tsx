@@ -1,6 +1,7 @@
 "use client"
 
 import { Accordion, AccordionItem } from "@nextui-org/react"
+import { Metadata } from "next";
 
 export default function AccordionComponent() {
     return (
