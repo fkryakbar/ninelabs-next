@@ -7,7 +7,7 @@ export default function Navbar() {
     const [open, setOpen] = useState(false)
 
     const pathName = usePathname();
-    console.log(pathName);
+
 
     return <div className="fixed top-0 w-full z-[100]">
         <div className="w-full h-2 bg-gradient-to-r from-[#0061ff] to-[#60efff]" />
@@ -30,7 +30,7 @@ export default function Navbar() {
                         <Link href="/">Home</Link>
                     </li>
                     <li className={`${pathName.startsWith("/services") ? "text-cyan-500 font-semibold" : ""}`}>
-                        <Link href="/services">Services</Link>
+                        <Link href="/#mulai">Services</Link>
                     </li>
                     <li className={`${pathName.startsWith("/pricing") ? "text-cyan-500 font-semibold" : ""}`}>
                         <Link href="/pricing">Harga</Link>

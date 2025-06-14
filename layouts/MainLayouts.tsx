@@ -26,7 +26,7 @@ export default function MainLayout({ children }: { children: React.ReactNode }) 
                                         </svg>
                                         Home
                                     </Link>
-                                    <Link href="/services" className="flex gap-1 items-center text-white hover:text-amber-300">
+                                    <Link href="/#mulai" className="flex gap-1 items-center text-white hover:text-amber-300">
                                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-4">
                                             <path strokeLinecap="round" strokeLinejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
                                         </svg>
@@ -58,9 +58,9 @@ export default function MainLayout({ children }: { children: React.ReactNode }) 
                             <div>
                                 <h1 className="text-white font-semibold text-3xl">Hubungi Kami</h1>
                                 <div className="mt-5 space-y-2">
-                                    <div className="flex gap-1 items-center text-white hover:text-amber-300">
-                                        +62 851-7994-6552
-                                    </div>
+                                    <a href="https://wa.me/6285179946552" className="flex gap-1 items-center text-white hover:text-amber-300">
+                                        WhatsApp
+                                    </a>
 
                                 </div>
                             </div>
